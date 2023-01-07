@@ -1,0 +1,39 @@
+DimCurrency              DimProduct               FactCurrencyRate       
+DimCustomer              DimProductCategory       FactInternetSales      
+DimDate                  DimProductSubcategory    FactInternetSalesReason
+DimDepartmentGroup       DimPromotion             FactResellerSales      
+DimEmployee              DimReseller              FactSurveyResponse     
+DimGeography             DimSalesReason         
+DimOrganization          DimSalesTerritory      
+sql
+"CREATE TABLE DimCurrency(
+	CurrencyKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	CurrencyAlternateKey nchar(3) NOT NULL,
+	CurrencyName nvarchar(50) NOT NULL
+)"
+"CREATE TABLE DimDate(
+	DateKey int NOT NULL PRIMARY KEY,
+	FullDateAlternateKey date NOT NULL,
+	DayNumberOfWeek tinyint NOT NULL,
+	EnglishDayNameOfWeek nvarchar(10) NOT NULL,
+	SpanishDayNameOfWeek nvarchar(10) NOT NULL,
+	FrenchDayNameOfWeek nvarchar(10) NOT NULL,
+	DayNumberOfMonth tinyint NOT NULL,
+	DayNumberOfYear smallint NOT NULL,
+	WeekNumberOfYear tinyint NOT NULL,
+	EnglishMonthName nvarchar(10) NOT NULL,
+	SpanishMonthName nvarchar(10) NOT NULL,
+	FrenchMonthName nvarchar(10) NOT NULL,
+	MonthNumberOfYear tinyint NOT NULL,
+	CalendarQuarter tinyint NOT NULL,
+	CalendarYear smallint NOT NULL,
+	CalendarSemester tinyint NOT NULL,
+	FiscalQuarter tinyint NOT NULL,
+	FiscalYear smallint NOT NULL,
+	FiscalSemester tinyint NOT NULL
+)"
+"CREATE TABLE DimDepartmentGroup(
+	DepartmentGroupKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	ParentDepartmentGroupKey int NULL,
+	DepartmentGroupName nvarchar(50) NULL
+)"
