@@ -1,0 +1,75 @@
+DimCurrency              DimProduct               FactCurrencyRate       
+DimCustomer              DimProductCategory       FactInternetSales      
+DimDate                  DimProductSubcategory    FactInternetSalesReason
+DimDepartmentGroup       DimPromotion             FactResellerSales      
+DimEmployee              DimReseller              FactSurveyResponse     
+DimGeography             DimSalesReason         
+DimOrganization          DimSalesTerritory      
+<TR><TH>&quot;Number of rows in DimCurrency&quot;</TH>
+</TR>
+<TR><TD>Number of rows in DimCurrency</TD>
+</TR>
+<TR><TH>count(1)</TH>
+</TR>
+<TR><TD>105</TD>
+</TR>
+<TR><TH>type</TH>
+<TH>name</TH>
+<TH>tbl_name</TH>
+<TH>rootpage</TH>
+<TH>sql</TH>
+</TR>
+<TR><TD>table</TD>
+<TD>DimCurrency</TD>
+<TD>DimCurrency</TD>
+<TD>2</TD>
+<TD>CREATE TABLE DimCurrency(
+	CurrencyKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	CurrencyAlternateKey nchar(3) NOT NULL,
+	CurrencyName nvarchar(50) NOT NULL
+)</TD>
+</TR>
+<TR><TH>sql</TH>
+</TR>
+<TR><TD>CREATE TABLE DimCurrency(
+	CurrencyKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	CurrencyAlternateKey nchar(3) NOT NULL,
+	CurrencyName nvarchar(50) NOT NULL
+)</TD>
+</TR>
+<TR><TH>sql</TH>
+</TR>
+<TR><TD>CREATE TABLE DimCurrency(
+	CurrencyKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	CurrencyAlternateKey nchar(3) NOT NULL,
+	CurrencyName nvarchar(50) NOT NULL
+)</TD>
+</TR>
+<TR><TD>CREATE TABLE DimDate(
+	DateKey int NOT NULL PRIMARY KEY,
+	FullDateAlternateKey date NOT NULL,
+	DayNumberOfWeek tinyint NOT NULL,
+	EnglishDayNameOfWeek nvarchar(10) NOT NULL,
+	SpanishDayNameOfWeek nvarchar(10) NOT NULL,
+	FrenchDayNameOfWeek nvarchar(10) NOT NULL,
+	DayNumberOfMonth tinyint NOT NULL,
+	DayNumberOfYear smallint NOT NULL,
+	WeekNumberOfYear tinyint NOT NULL,
+	EnglishMonthName nvarchar(10) NOT NULL,
+	SpanishMonthName nvarchar(10) NOT NULL,
+	FrenchMonthName nvarchar(10) NOT NULL,
+	MonthNumberOfYear tinyint NOT NULL,
+	CalendarQuarter tinyint NOT NULL,
+	CalendarYear smallint NOT NULL,
+	CalendarSemester tinyint NOT NULL,
+	FiscalQuarter tinyint NOT NULL,
+	FiscalYear smallint NOT NULL,
+	FiscalSemester tinyint NOT NULL
+)</TD>
+</TR>
+<TR><TD>CREATE TABLE DimDepartmentGroup(
+	DepartmentGroupKey int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	ParentDepartmentGroupKey int NULL,
+	DepartmentGroupName nvarchar(50) NULL
+)</TD>
+</TR>
